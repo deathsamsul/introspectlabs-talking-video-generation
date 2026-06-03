@@ -276,6 +276,7 @@ class StreamSDK:
             self.worker_exception = e
             self.stop_event.set()
 
+
     def _writer_worker(self):
         while not self.stop_event.is_set():
             try:
