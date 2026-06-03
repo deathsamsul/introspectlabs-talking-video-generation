@@ -97,11 +97,9 @@ def generate_avatar(
     emotion:     str   = "neutral",
     output_path: str   = "outputs/avatar_response.mp4",
     data_root:   str   = None,
-    cfg_pkl:     str   = None,
-) -> dict:
+    cfg_pkl:     str   = None, ) -> dict:
     """
     Full pipeline: text/audio + image → talking avatar video.
-
     Returns a dict with keys: output_path, generation_time_sec, audio_path.
     """
     t_start = time.time()
@@ -188,11 +186,9 @@ def generate_duration_tests(
     audio_path: str,
     output_dir: str  = "outputs",
     data_root:  str  = None,
-    cfg_pkl:    str  = None,
-) -> list[dict]:
+    cfg_pkl:    str  = None, ) -> list[dict]:
     """
     Generate three test videos at 5s, 10s, and 20s from a sample audio.
-
     Returns list of result dicts.
     """
     if data_root is None or cfg_pkl is None:
@@ -229,7 +225,7 @@ def generate_duration_tests(
             )
             elapsed = time.time() - t0
 
-        print(f"  ✓  {out_mp4}  ({elapsed:.1f}s)")
+        print(f"  {out_mp4}  ({elapsed:.1f}s)")
         results.append({"duration": duration, "output": out_mp4, "time_sec": round(elapsed, 2)})
 
     return results
@@ -267,12 +263,11 @@ def build_parser() -> argparse.ArgumentParser:
         help=(
             "Emotion label. One of: neutral, confident, angry, sad, teasing, intense.\n"
             "Default: neutral"
-        ),
-    )
+        ), )
+    
     p.add_argument(
         "--output", default="outputs/avatar_response.mp4",
-        help="Path for the output video (.mp4). Default: outputs/avatar_response.mp4",
-    )
+        help="Path for the output video (.mp4). Default: outputs/avatar_response.mp4",)
 
     # Duration test mode
     p.add_argument(
@@ -280,8 +275,7 @@ def build_parser() -> argparse.ArgumentParser:
         help=(
             "Generate 3 test videos at 5s, 10s, and 20s from --audio.\n"
             "Requires --audio. Output goes to the same directory as --output."
-        ),
-    )
+        ),)
 
     # Checkpoint overrides
     p.add_argument("--data-root", default=None, help="Override Ditto checkpoint directory.")
@@ -306,8 +300,8 @@ def main():
             audio_path = args.audio,
             output_dir = output_dir,
             data_root  = args.data_root,
-            cfg_pkl    = args.cfg_pkl,
-        )
+            cfg_pkl    = args.cfg_pkl,)
+        
         print("\nDuration test summary:")
         for r in results:
             print(f"  {r['duration']:>3}s  →  {r['output']}  ({r['time_sec']}s)")
@@ -326,8 +320,7 @@ def main():
         emotion     = args.emotion,
         output_path = args.output,
         data_root   = args.data_root,
-        cfg_pkl     = args.cfg_pkl,
-    )
+        cfg_pkl     = args.cfg_pkl,)
 
     print(f"Output path      : {result['output_path']}")
     print(f"Generation time  : {result['generation_time_sec']}s")
