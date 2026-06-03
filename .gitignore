@@ -38,3 +38,6 @@ prepare_data
 
 !example/audio.wav
 !example/image.png
+
+# understanding note internal
+note.txt
