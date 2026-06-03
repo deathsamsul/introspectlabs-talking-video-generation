@@ -6,6 +6,7 @@ import random
 import torch
 import pickle
 
+
 from stream_pipeline_offline import StreamSDK
 
 
@@ -64,6 +65,7 @@ def run(SDK: StreamSDK, audio_path: str, source_path: str, output_path: str, mor
 
 
 if __name__ == "__main__":
+    print("Inference start!")
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_root", type=str, default="./checkpoints/ditto_trt_Ampere_Plus", help="path to trt data_root")
