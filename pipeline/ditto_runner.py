@@ -46,7 +46,6 @@ def run_ditto(
 ) -> str:
     """
     Call Ditto's inference.py via subprocess.
-
     Args:
         image_path:        Path to source portrait image (.jpg / .png).
         audio_path:        Path to input audio (.wav, 16 kHz mono recommended).
@@ -56,10 +55,8 @@ def run_ditto(
         python_bin:        Python interpreter to use (default: current env).
         inference_script:  Path to inference.py (default: ./inference.py).
         extra_args:        Optional list of extra CLI flags for inference.py.
-
     Returns:
         Resolved path to the generated .mp4 file.
-
     Raises:
         FileNotFoundError: If any required input file is missing.
         RuntimeError:      If inference.py exits with a non-zero code.
@@ -115,7 +112,6 @@ def run_ditto(
 def resolve_checkpoints(prefer_pytorch: bool = True) -> tuple[str, str]:
     """
     Auto-detect which checkpoint set to use.
-
     Returns:
         (data_root, cfg_pkl) tuple.
     """
