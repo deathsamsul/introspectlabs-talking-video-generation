@@ -1,0 +1,26 @@
+## already existing 
+#torch
+#torchvision
+#torchaudio
+#numpy
+#scipy
+#pillow
+#pyyaml
+
+
+edge-tts
+gtts
+filetype==1.2.0
+colored
+polygraphy
+imageio==2.36.1
+imageio-ffmpeg==0.5.1
+librosa==0.10.2.post1
+opencv-python-headless==4.10.0.84
+scikit-image==0.25.0
+scikit-learn==1.6.0
+soundfile==0.13.0
+soxr==0.5.0.post1
+tqdm==4.67.1
+onnxruntime
+mediapipe
