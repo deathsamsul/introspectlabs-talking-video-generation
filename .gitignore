@@ -28,7 +28,7 @@ tmp*
 log/*
 *.mp4
 *.png
-*.jpg
+# *.jpg
 *.wav
 *.pth
 *.pyc
