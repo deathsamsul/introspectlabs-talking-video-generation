@@ -15,10 +15,10 @@ if PROJECT_ROOT not in sys.path:
 
 
 #TODO: create this pipelines functions 
-# from pipeline.tts import generate_tts
-# from pipeline.audio_utils import ensure_wav, cut_audio_to_duration, get_audio_duration
-# from pipeline.ditto_runner import run_ditto, resolve_checkpoints
-# from pipeline.emotion_utils import load_emotion_config, get_emotion_params, is_emotion_supported
+from pipeline.tts import generate_tts
+from pipeline.audio_utils import ensure_wav, cut_audio_to_duration, get_audio_duration
+from pipeline.ditto_runner import run_ditto, resolve_checkpoints
+from pipeline.emotion_utils import load_emotion_config, get_emotion_params, is_emotion_supported
 
 
 
