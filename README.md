@@ -1,5 +1,15 @@
 # PersonaMatrix – Talking Avatar Generator
 
+
+## 🎥 Demo Videos
+
+### Full Step-by-Step Process Demo
+[▶️ Watch on YouTube](https://youtu.be/jE_P-0kjTqQ)
+
+### Generated Output
+[📁 View Generated Output on Google Drive](https://drive.google.com/drive/folders/13q5T-d3zTQngqSvnbniiCB03SbIhOABc?usp=drive_link)
+
+
 Convert a static character portrait + text (or audio) into a talking avatar video using [Ditto TalkingHead](https://github.com/antgroup/ditto-talkinghead).
 
 ---
