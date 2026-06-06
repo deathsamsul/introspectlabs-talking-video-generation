@@ -1,3 +1,11 @@
+
+## 🎬 Demo
+
+<p align="center">
+  <img src="samples/tts_avatar_output-ezgif.com-video-to-gif-converter.gif" width="800">
+</p>
+
+
 # PersonaMatrix – Talking Avatar Generator
 
 
